@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@powersync/react": "^1.5.1",
+    "@powersync/web": "1.12.3",
     "@supabase/supabase-js": "^2.47.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -24,6 +26,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "supabase": "^1.165.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.10",
     "vite-plugin-pwa": "^0.20.5",
