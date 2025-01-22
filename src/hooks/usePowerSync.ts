@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { WASQLitePowerSyncDatabaseOpenFactory } from "@powersync/web";
-import { AppSchema } from "../library/AppSchema";
+import { AppSchema } from "../library/powersync/AppSchema";
 
 const usePowerSync = () => {
   const [powerSync, setPowerSync] = useState<any>(null);
