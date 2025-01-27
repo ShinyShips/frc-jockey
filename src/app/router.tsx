@@ -1,4 +1,6 @@
 import { Outlet, createBrowserRouter, useNavigate } from 'react-router-dom';
+import LoginPage from '../app/auth/login/page';
+import RegisterPage from '../app/auth/register/page';
 import EntryPage from '../app/page';
 import TodoEditPage from '../app/views/todo-lists/edit/page';
 import TodoListsPage from '../app/views/todo-lists/page';
@@ -27,27 +29,27 @@ const AuthGuard = ({ children }: AuthGuardProps) => {
       return;
     }
 
-    // connector.client.auth.onAuthStateChange(async (event, _session) => {
-    //   if (event === 'SIGNED_OUT') {
-    //     navigate(LOGIN_ROUTE);
-    //   }
-    // });
+    connector.client.auth.onAuthStateChange(async (event, _session) => {
+      if (event === 'SIGNED_OUT') {
+        navigate(LOGIN_ROUTE);
+      }
+    });
 
-    // const loginGuard = () => {
-    //   if (!connector.currentSession) {
-    //     navigate(LOGIN_ROUTE);
-    //   }
-    // }
-    // if (connector.ready) {
-    //   loginGuard();
-    // } else {
-    //   const l = connector.registerListener({
-    //     initialized: () => {
-    //       loginGuard();
-    //     }
-    //   });
-    //   return () => l?.();
-    // }
+    const loginGuard = () => {
+      if (!connector.currentSession) {
+        navigate(LOGIN_ROUTE);
+      }
+    }
+    if (connector.ready) {
+      loginGuard();
+    } else {
+      const l = connector.registerListener({
+        initialized: () => {
+          loginGuard();
+        }
+      });
+      return () => l?.();
+    }
 
   }, []);
   return children;
@@ -62,6 +64,14 @@ export const router = createBrowserRouter([
   {
     path: '/',
     element: <EntryPage />
+  },
+  {
+    path: LOGIN_ROUTE,
+    element: <LoginPage />
+  },
+  {
+    path: REGISTER_ROUTE,
+    element: <RegisterPage />
   },
   {
     element: (

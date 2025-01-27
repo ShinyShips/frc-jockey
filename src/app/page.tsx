@@ -18,12 +18,12 @@ export default function EntryPage() {
   const navigate = useNavigate();
 
   const navigateToMainView = () => {
-    navigate(DEFAULT_ENTRY_ROUTE);
+    if (connector?.currentSession) {
+      navigate(DEFAULT_ENTRY_ROUTE);
+    }
   };
 
   React.useEffect(() => {
-
-    console.log("entry page")
     if (!connector) {
       console.error(`No Supabase connector has been created yet.`);
       return;
@@ -38,7 +38,7 @@ export default function EntryPage() {
           if (connector.currentSession) {
             navigate(DEFAULT_ENTRY_ROUTE);
           } else {
-            // navigate(LOGIN_ROUTE);
+            navigate(LOGIN_ROUTE);
           }
         }
       });
