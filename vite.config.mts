@@ -3,6 +3,7 @@ import topLevelAwait from 'vite-plugin-top-level-await';
 import { fileURLToPath, URL } from 'url';
 
 import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
@@ -29,6 +30,7 @@ export default defineConfig({
     // include: ['@powersync/web > js-logger'], // <-- Include `js-logger` when it isn't installed and imported.
   },
   plugins: [
+    tailwindcss(),
     wasm(),
     topLevelAwait(),
     react(),
