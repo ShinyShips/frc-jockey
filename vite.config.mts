@@ -1,7 +1,7 @@
 import wasm from 'vite-plugin-wasm';
 import topLevelAwait from 'vite-plugin-top-level-await';
 import { fileURLToPath, URL } from 'url';
-
+import path from "path"
 import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react';
@@ -18,7 +18,9 @@ export default defineConfig({
     emptyOutDir: true
   },
   resolve: {
-    alias: [{ find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) }]
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
   publicDir: '../public',
   envDir: '..', // Use this dir for env vars, not 'src'.
