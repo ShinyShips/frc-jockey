@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSupabase } from '../../../components/providers/SystemProvider';
 import { LoginDetailsWidget } from '../../../components/widgets/LoginDetailsWidget';

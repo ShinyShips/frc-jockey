@@ -12,7 +12,7 @@ import {
   styled
 } from '@mui/material';
 import Fab from '@mui/material/Fab';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSupabase } from '../../../components/providers/SystemProvider';
 import { LISTS_TABLE } from '../../../library/powersync/AppSchema';
 import { NavigationPage } from '../../../components/navigation/NavigationPage';

@@ -8,12 +8,16 @@ import ViewsLayout from '../app/views/layout';
 import SQLConsolePage from '../app/views/sql-console/page';
 import { useSupabase } from '../components/providers/SystemProvider';
 import React from 'react';
+import TeamListPage from './views/team-list/page';
+import StatsPage from './views/stats/page';
 
 export const TODO_LISTS_ROUTE = '/views/todo-lists';
 export const TODO_EDIT_ROUTE = '/views/todo-lists/:id';
 export const LOGIN_ROUTE = '/auth/login';
 export const REGISTER_ROUTE = '/auth/register';
 export const SQL_CONSOLE_ROUTE = '/sql-console';
+export const TEAM_LIST_ROUTE = '/views/team-list';
+export const STATS_ROUTE = '/views/stats';
 
 interface AuthGuardProps {
   children: JSX.Element;
@@ -95,5 +99,13 @@ export const router = createBrowserRouter([
         element: <SQLConsolePage />
       }
     ]
+  },
+  {
+    path: TEAM_LIST_ROUTE,
+    element: <TeamListPage />
+  },
+  {
+    path: STATS_ROUTE,
+    element: <StatsPage />
   }
 ]);
