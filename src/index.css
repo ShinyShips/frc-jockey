@@ -243,3 +243,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(var(--background)); /* Ensure background color is applied */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(var(--background)); /* Ensure background color is applied */
+}

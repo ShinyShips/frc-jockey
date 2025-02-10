@@ -11,7 +11,7 @@ export function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <SystemProvider>
-        <RouterProvider router={router} />
+        <RouterProvider router={router}/>
       </SystemProvider>
     </ThemeProvider>
   );
