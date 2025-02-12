@@ -10,6 +10,7 @@ import { useSupabase } from '../components/providers/SystemProvider';
 import React from 'react';
 import TeamListPage from './views/team-list/page';
 import StatsPage from './views/stats/page';
+import SearchPage from './views/search/page';
 
 export const TODO_LISTS_ROUTE = '/views/todo-lists';
 export const TODO_EDIT_ROUTE = '/views/todo-lists/:id';
@@ -18,6 +19,8 @@ export const REGISTER_ROUTE = '/auth/register';
 export const SQL_CONSOLE_ROUTE = '/sql-console';
 export const TEAM_LIST_ROUTE = '/views/team-list';
 export const STATS_ROUTE = '/views/stats';
+export const SEARCH_ROUTE = '/views/search';
+
 
 interface AuthGuardProps {
   children: JSX.Element;
@@ -107,5 +110,9 @@ export const router = createBrowserRouter([
   {
     path: STATS_ROUTE,
     element: <StatsPage />
+  },
+  {
+    path: SEARCH_ROUTE,
+    element: <SearchPage />
   }
 ]);

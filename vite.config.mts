@@ -37,6 +37,9 @@ export default defineConfig({
     topLevelAwait(),
     react(),
     VitePWA({
+      workbox: {
+        maximumFileSizeToCacheInBytes: 7000000, // 7MB로 설정 (필요한 크기에 맞게 조절)
+      },
       registerType: 'autoUpdate',
       includeAssets: ['powersync-logo.svg', 'supabase-logo.png', 'favicon.ico'],
       manifest: {

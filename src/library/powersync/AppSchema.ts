@@ -1,5 +1,5 @@
 import { column, Schema, Table } from '@powersync/web';
-import { match } from 'assert';
+// import { match } from 'assert';
 
 export const LISTS_TABLE = 'lists';
 export const TODOS_TABLE = 'todos';
