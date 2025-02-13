@@ -32,6 +32,7 @@ const matches = new Table({
   id: column.text,
   match_number: column.integer,
   user_id: column.text,
+  event: column.text,
 });
 
 const teams = new Table({
