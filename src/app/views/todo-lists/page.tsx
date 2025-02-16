@@ -33,6 +33,8 @@ export default function TodoListsPage() {
   const supabase = useSupabase();
   const status = useStatus();
 
+  console.log(powerSync)
+
 
   // console.log("status: " + status)
   // console.log(status)
@@ -55,6 +57,8 @@ export default function TodoListsPage() {
       `INSERT INTO ${LISTS_TABLE} (id, created_at, name, owner_id) VALUES (uuid(), datetime(), ?, ?) RETURNING *`,
       [name, userID]
     );
+
+    console.log( res)
 
     const resultRecord = res.rows?.item(0);
     if (!resultRecord) {

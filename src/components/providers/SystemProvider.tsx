@@ -14,12 +14,15 @@ export const useSupabase = () => React.useContext(SupabaseContext);
 export const db = new PowerSyncDatabase({
   schema: AppSchema,
   database: {
-    dbFilename: 'example.db'
-  }
+    dbFilename: 'example.db',
+    debugMode: true,
+  },
 });
 
 export const SystemProvider = ({ children }: { children: React.ReactNode }) => {
   const [connector] = React.useState(new SupabaseConnector());
+
+  console.log(db)
   const [powerSync] = React.useState(db);
 
   React.useEffect(() => {

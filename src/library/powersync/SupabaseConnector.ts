@@ -47,6 +47,9 @@ export class SupabaseConnector extends BaseObserver<SupabaseConnectorListener> i
       supabaseAnonKey: import.meta.env.VITE_SUPABASE_ANON_KEY
     };
 
+    console.log("powersync url: " + import.meta.env.VITE_POWERSYNC_URL)
+    
+
     this.client = createClient(this.config.supabaseUrl, this.config.supabaseAnonKey);
     this.currentSession = null;
     this.ready = false;
@@ -91,6 +94,7 @@ export class SupabaseConnector extends BaseObserver<SupabaseConnectorListener> i
     }
 
     console.debug('session expires at', session.expires_at);
+
 
     return {
       endpoint: this.config.powersyncUrl,
