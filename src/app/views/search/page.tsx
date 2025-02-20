@@ -72,7 +72,7 @@ export default function SearchPage() {
                     <Combobox />
                 </div>
                 <div className='grid grid-cols-1'>
-                    <DataTable teams={teams} />               
+                    {teams !== undefined ? <DataTable teams={teams} /> : <p>Loading...</p>}
                 </div>
             </div>
         </NavigationPage>

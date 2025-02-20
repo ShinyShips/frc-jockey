@@ -346,7 +346,7 @@ export const columns: ColumnDef<teams>[] = [
   // },
 ]
 
-export function DataTable(data: {teams: any}) {
+export function DataTable(teamData: {teams: any}) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -354,7 +354,7 @@ export function DataTable(data: {teams: any}) {
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({})
   const [rowSelection, setRowSelection] = React.useState({})
-  const { teams } = data
+  const { teams } = teamData
 
   const table = useReactTable({
     data: teams,
