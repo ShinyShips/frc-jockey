@@ -38,174 +38,174 @@ import {
 //points added
 //auto points
 //teleop points
-const data: Payment[] = [
-  {
-    id: "m5gr84i9",
-    teamNumber: "3314",
-    pointsAdded: 100,
-    autoPoints: 50,
-    teleopPoints: 15,
-  },
-  {
-    id: "3u1reuv4",
-    teamNumber: "1234",
-    pointsAdded: 10,
-    autoPoints: 2,
-    teleopPoints: 8,
-  },
-  {
-    id: "derv1ws0",
-    teamNumber: "5678",
-    pointsAdded: 25,
-    autoPoints: 10,
-    teleopPoints: 15,
-  },
-  {
-    id: "m5gr84i9",
-    teamNumber: "3314",
-    pointsAdded: 100,
-    autoPoints: 50,
-    teleopPoints: 15,
-  },
-  {
-    id: "3u1reuv4",
-    teamNumber: "1234",
-    pointsAdded: 10,
-    autoPoints: 2,
-    teleopPoints: 8,
-  },
-  {
-    id: "derv1ws0",
-    teamNumber: "5678",
-    pointsAdded: 25,
-    autoPoints: 10,
-    teleopPoints: 15,
-  },
-  {
-    id: "m5gr84i9",
-    teamNumber: "3314",
-    pointsAdded: 100,
-    autoPoints: 50,
-    teleopPoints: 15,
-  },
-  {
-    id: "3u1reuv4",
-    teamNumber: "1234",
-    pointsAdded: 10,
-    autoPoints: 2,
-    teleopPoints: 8,
-  },
-  {
-    id: "derv1ws0",
-    teamNumber: "5678",
-    pointsAdded: 25,
-    autoPoints: 10,
-    teleopPoints: 15,
-  },
-  {
-    id: "m5gr84i9",
-    teamNumber: "3314",
-    pointsAdded: 100,
-    autoPoints: 50,
-    teleopPoints: 15,
-  },
-  {
-    id: "3u1reuv4",
-    teamNumber: "1234",
-    pointsAdded: 10,
-    autoPoints: 2,
-    teleopPoints: 8,
-  },
-  {
-    id: "derv1ws0",
-    teamNumber: "5678",
-    pointsAdded: 25,
-    autoPoints: 10,
-    teleopPoints: 15,
-  },
-  {
-    id: "m5gr84i9",
-    teamNumber: "3314",
-    pointsAdded: 100,
-    autoPoints: 50,
-    teleopPoints: 15,
-  },
-  {
-    id: "3u1reuv4",
-    teamNumber: "1234",
-    pointsAdded: 10,
-    autoPoints: 2,
-    teleopPoints: 8,
-  },
-  {
-    id: "derv1ws0",
-    teamNumber: "5678",
-    pointsAdded: 25,
-    autoPoints: 10,
-    teleopPoints: 15,
-  },
-  {
-    id: "m5gr84i9",
-    teamNumber: "3314",
-    pointsAdded: 100,
-    autoPoints: 50,
-    teleopPoints: 15,
-  },
-  {
-    id: "3u1reuv4",
-    teamNumber: "1234",
-    pointsAdded: 10,
-    autoPoints: 2,
-    teleopPoints: 8,
-  },
-  {
-    id: "derv1ws0",
-    teamNumber: "5678",
-    pointsAdded: 25,
-    autoPoints: 10,
-    teleopPoints: 15,
-  },
-  {
-    id: "m5gr84i9",
-    teamNumber: "3314",
-    pointsAdded: 100,
-    autoPoints: 50,
-    teleopPoints: 15,
-  },
-  {
-    id: "3u1reuv4",
-    teamNumber: "1234",
-    pointsAdded: 10,
-    autoPoints: 2,
-    teleopPoints: 8,
-  },
-  {
-    id: "derv1ws0",
-    teamNumber: "5678",
-    pointsAdded: 25,
-    autoPoints: 10,
-    teleopPoints: 15,
-  },
-  // {
-  //   amount: 837,
-  //   teamNumber: "5678",
-  //   email: "Monserrat44@gmail.com",
-  // },
-  // {
-  //   id: "5kma53ae",
-  //   amount: 874,
-  //   teamNumber: "9012",
-  //   email: "Silas22@gmail.com",
-  // },
-  // {
-  //   id: "bhqecj4p",
-  //   amount: 721,
-  //   teamNumber: "9999",
-  //   email: "carmella@hotmail.com",
-  // },
-]
+// const data: Payment[] = [
+//   {
+//     id: "m5gr84i9",
+//     teamNumber: "3314",
+//     pointsAdded: 100,
+//     autoPoints: 50,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "3u1reuv4",
+//     teamNumber: "1234",
+//     pointsAdded: 10,
+//     autoPoints: 2,
+//     teleopPoints: 8,
+//   },
+//   {
+//     id: "derv1ws0",
+//     teamNumber: "5678",
+//     pointsAdded: 25,
+//     autoPoints: 10,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "m5gr84i9",
+//     teamNumber: "3314",
+//     pointsAdded: 100,
+//     autoPoints: 50,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "3u1reuv4",
+//     teamNumber: "1234",
+//     pointsAdded: 10,
+//     autoPoints: 2,
+//     teleopPoints: 8,
+//   },
+//   {
+//     id: "derv1ws0",
+//     teamNumber: "5678",
+//     pointsAdded: 25,
+//     autoPoints: 10,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "m5gr84i9",
+//     teamNumber: "3314",
+//     pointsAdded: 100,
+//     autoPoints: 50,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "3u1reuv4",
+//     teamNumber: "1234",
+//     pointsAdded: 10,
+//     autoPoints: 2,
+//     teleopPoints: 8,
+//   },
+//   {
+//     id: "derv1ws0",
+//     teamNumber: "5678",
+//     pointsAdded: 25,
+//     autoPoints: 10,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "m5gr84i9",
+//     teamNumber: "3314",
+//     pointsAdded: 100,
+//     autoPoints: 50,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "3u1reuv4",
+//     teamNumber: "1234",
+//     pointsAdded: 10,
+//     autoPoints: 2,
+//     teleopPoints: 8,
+//   },
+//   {
+//     id: "derv1ws0",
+//     teamNumber: "5678",
+//     pointsAdded: 25,
+//     autoPoints: 10,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "m5gr84i9",
+//     teamNumber: "3314",
+//     pointsAdded: 100,
+//     autoPoints: 50,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "3u1reuv4",
+//     teamNumber: "1234",
+//     pointsAdded: 10,
+//     autoPoints: 2,
+//     teleopPoints: 8,
+//   },
+//   {
+//     id: "derv1ws0",
+//     teamNumber: "5678",
+//     pointsAdded: 25,
+//     autoPoints: 10,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "m5gr84i9",
+//     teamNumber: "3314",
+//     pointsAdded: 100,
+//     autoPoints: 50,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "3u1reuv4",
+//     teamNumber: "1234",
+//     pointsAdded: 10,
+//     autoPoints: 2,
+//     teleopPoints: 8,
+//   },
+//   {
+//     id: "derv1ws0",
+//     teamNumber: "5678",
+//     pointsAdded: 25,
+//     autoPoints: 10,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "m5gr84i9",
+//     teamNumber: "3314",
+//     pointsAdded: 100,
+//     autoPoints: 50,
+//     teleopPoints: 15,
+//   },
+//   {
+//     id: "3u1reuv4",
+//     teamNumber: "1234",
+//     pointsAdded: 10,
+//     autoPoints: 2,
+//     teleopPoints: 8,
+//   },
+//   {
+//     id: "derv1ws0",
+//     teamNumber: "5678",
+//     pointsAdded: 25,
+//     autoPoints: 10,
+//     teleopPoints: 15,
+//   },
+//   // {
+//   //   amount: 837,
+//   //   teamNumber: "5678",
+//   //   email: "Monserrat44@gmail.com",
+//   // },
+//   // {
+//   //   id: "5kma53ae",
+//   //   amount: 874,
+//   //   teamNumber: "9012",
+//   //   email: "Silas22@gmail.com",
+//   // },
+//   // {
+//   //   id: "bhqecj4p",
+//   //   amount: 721,
+//   //   teamNumber: "9999",
+//   //   email: "carmella@hotmail.com",
+//   // },
+// ]
 
-export type Payment = {
+export type teams = {
   id: string
   teamNumber: string
   pointsAdded: number
@@ -213,7 +213,7 @@ export type Payment = {
   teleopPoints: number
 }
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<teams>[] = [
   // {
   //   id: "select",
   //   header: ({ table }) => (
@@ -346,7 +346,7 @@ export const columns: ColumnDef<Payment>[] = [
   // },
 ]
 
-export function DataTable() {
+export function DataTable(data: {teams: any}) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -354,9 +354,10 @@ export function DataTable() {
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({})
   const [rowSelection, setRowSelection] = React.useState({})
+  const { teams } = data
 
   const table = useReactTable({
-    data,
+    data: teams,
     columns,
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,

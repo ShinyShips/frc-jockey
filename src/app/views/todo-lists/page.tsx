@@ -18,17 +18,17 @@ import { LISTS_TABLE } from '../../../library/powersync/AppSchema';
 import { NavigationPage } from '../../../components/navigation/NavigationPage';
 import { TodoListsWidget } from '../../../components/widgets/TodoListsWidget';
 
-async function login() {
-  const supabase = useSupabase();
+// async function login() {
+//   const supabase = useSupabase();
 
 
-  await supabase?.login(import.meta.env.VITE_SUPABASE_EMAIL, import.meta.env.VITE_SUPABASE_PASSWORD);
+//   await supabase?.login(import.meta.env.VITE_SUPABASE_EMAIL, import.meta.env.VITE_SUPABASE_PASSWORD);
 
-}
+// }
 
 export default function TodoListsPage() {
 
-  login();
+  //login();
   const powerSync = usePowerSync();
   const supabase = useSupabase();
   const status = useStatus();

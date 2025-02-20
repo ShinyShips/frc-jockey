@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react';
+import { usePowerSync, useStatus } from '@powersync/react';
 import { NavigationPage } from '../../../components/navigation/NavigationPage';
 import { Combobox } from '@/components/ui/combobox';
-import { DataTable } from '@/components/ui/table-datatable';
+import { DataTable, teams } from '@/components/ui/table-datatable';
 // import {
 //     Table,
 //     TableBody,
@@ -29,6 +31,39 @@ import { DataTable } from '@/components/ui/table-datatable';
   // ]
 
 export default function SearchPage() {
+    const powersync = usePowerSync();
+    const status = useStatus();
+    const [teams, setTeams] = useState<teams[]>();
+
+    const getSelectTeams = async () => {
+        const res = await powersync.execute(
+        `
+            SELECT distinct select_team
+            FROM scouting_data
+        ` 
+        );
+        console.log(res)
+        return res;
+    }
+    console.log(status)
+    console.log(getSelectTeams())
+
+    useEffect(() => {
+        const fetchTeams = async () => {
+            const data = await getSelectTeams();
+            const transformedData = data.rows?._array.map((team: { select_team: number }) => ({
+                id:"3u1reuv4",
+                teamNumber: team.select_team.toString(),
+                pointsAdded: 50,
+                autoPoints: 50,
+                teleopPoints: 50,
+            }));
+            setTeams(transformedData);
+        };
+
+        fetchTeams();
+    }, []);
+
     return (
         <NavigationPage title="Team Search">
             <div className='h-full bg-zinc-950 text-zinc-50 px-5'>
@@ -36,16 +71,10 @@ export default function SearchPage() {
                     <h1 className='text-xl font-semibold'>Team Stats</h1>
                     <Combobox />
                 </div>
-
                 <div className='grid grid-cols-1'>
-          <DataTable>
-                        
-          </DataTable>
-        </div>
-
+                    <DataTable teams={teams} />               
+                </div>
             </div>
         </NavigationPage>
-
-
     );
-  }
+}

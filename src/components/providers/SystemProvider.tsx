@@ -28,11 +28,13 @@ export const SystemProvider = ({ children }: { children: React.ReactNode }) => {
     Logger.setLevel(Logger.DEBUG);
     // For console testing purposes
     (window as any)._powersync = powerSync;
+    console.log('PowerSync:', powerSync);
 
     powerSync.init();
     const l = connector.registerListener({
       initialized: () => {},
       sessionStarted: () => {
+        console.log('PowerSync session started, connecting to:', connector);
         powerSync.connect(connector);
       }
     });

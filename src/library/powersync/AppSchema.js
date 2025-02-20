@@ -6,6 +6,7 @@ export var TEAMS_TABLE = 'teams';
 export var MATCH_TEAMS_TABLE = 'match_teams';
 export var AUTO_TABLE = 'auto';
 export var TELEOP_TABLE = 'teleop';
+export var SCOUTING_DATA_TABLE = 'scouting_data';
 var todos = new Table({
     list_id: column.text,
     created_at: column.text,
@@ -83,6 +84,62 @@ var teleop = new Table({
     pick_reef_count: column.integer,
     pick_carpet_count: column.integer,
 });
+
+var scouting_data = new Table(
+    {
+      // id column (text) is automatically included
+      user_id: column.text,
+      match_number: column.integer,
+      alliance: column.text,
+      scouter_initials: column.text,
+      select_team: column.integer,
+      event: column.text,
+      start_poses0: column.integer,
+      start_poses1: column.integer,
+      start_poses2: column.integer,
+      start_poses3: column.integer,
+      start_poses4: column.integer,
+      start_poses5: column.integer,
+      auto_coral_place_l1_count: column.integer,
+      auto_coral_place_l2_count: column.integer,
+      auto_coral_place_l3_count: column.integer,
+      auto_coral_place_l4_count: column.integer,
+      auto_coral_place_drop_miss_count: column.integer,
+      auto_coral_pick_station_count: column.integer,
+      auto_coral_pick_mark1_count: column.integer,
+      auto_coral_pick_mark2_count: column.integer,
+      auto_coral_pick_mark3_count: column.integer,
+      auto_algae_place_net_shot: column.integer,
+      auto_algae_place_processor: column.integer,
+      auto_algae_place_drop_miss: column.integer,
+      auto_algae_pick_reef_count: column.integer,
+      auto_algae_pick_mark1_count: column.integer,
+      auto_algae_pick_mark2_count: column.integer,
+      auto_algae_pick_mark3_count: column.integer,
+      auto_passed_start_line: column.integer,
+      teleop_coral_place_l1_count: column.integer,
+      teleop_coral_place_l2_count: column.integer,
+      teleop_coral_place_l3_count: column.integer,
+      teleop_coral_place_l4_count: column.integer,
+      teleop_coral_place_drop_miss_count: column.integer,
+      teleop_coral_pick_station_count: column.integer,
+      teleop_coral_pick_carpet_count: column.integer,
+      teleop_algae_place_net_shot: column.integer,
+      teleop_algae_place_processor: column.integer,
+      teleop_algae_place_drop_miss: column.integer,
+      teleop_algae_pick_reef_count: column.integer,
+      teleop_algae_pick_carpet_count: column.integer,
+      shallow_climb_attempted: column.integer,
+      deep_climb_attempted: column.integer,
+      park_attempted: column.integer,
+      climb_failed: column.integer,
+      played_defense: column.integer,
+      broke_down: column.integer,
+      comment: column.text
+    },
+    { indexes: {} }
+  );
+
 export var AppSchema = new Schema({
     todos: todos,
     lists: lists,
@@ -91,4 +148,5 @@ export var AppSchema = new Schema({
     match_teams: match_teams,
     auto: auto,
     teleop: teleop,
+    scouting_data: scouting_data,
 });
